@@ -1,4 +1,5 @@
-import { N as reactExports, G as jsxRuntimeExports } from "./server-D8HdGaMr.js";
+import { N as reactExports, G as jsxRuntimeExports } from "./server-1zFDGI9i.js";
+import { L as Link } from "./router-BAfQ6qT_.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
@@ -262,7 +263,7 @@ function Index() {
     } }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("aside", { className: "absolute font-hand flex flex-col gap-2", style: {
       top: 40,
-      left: 40,
+      left: 80,
       width: 260,
       zIndex: 10,
       background: "var(--paper)",
@@ -289,7 +290,7 @@ function Index() {
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "absolute font-display text-pop-red", style: {
       top: 80,
-      left: 340,
+      left: 380,
       fontSize: "clamp(56px, 9vw, 128px)",
       letterSpacing: "0.04em",
       lineHeight: 0.95,
@@ -303,8 +304,8 @@ function Index() {
       "CODEX"
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "absolute font-hand text-ink", style: {
-      top: 260,
-      left: 346,
+      top: 340,
+      left: 386,
       fontSize: 32,
       lineHeight: 1.1,
       transform: "rotate(-1deg)",
@@ -316,8 +317,8 @@ function Index() {
       "."
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "absolute paper ink-border ink-shadow p-6 max-w-sm", style: {
-      top: 360,
-      left: 346,
+      top: 460,
+      left: 386,
       background: "var(--paper)",
       transform: "rotate(-0.5deg)",
       zIndex: 2
@@ -450,7 +451,15 @@ function Index() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute bottom-6 left-1/2 -translate-x-1/2 font-hand text-lg text-ink/70 z-2", children: [
       "kept by hand · pressed under the page · ",
       (/* @__PURE__ */ new Date()).getFullYear()
-    ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/conclusion", className: "fixed right-0 top-1/2 -translate-y-1/2 ink-border bg-pop-yellow flex items-center justify-center font-display text-4xl text-ink hover:bg-pop-red hover:text-paper transition-colors z-50 group", style: {
+      width: 64,
+      height: 80,
+      borderRight: "none",
+      borderTopRightRadius: 0,
+      borderBottomRightRadius: 0,
+      boxShadow: "-4px 4px 0 var(--ink)"
+    }, "aria-label": "Proceed to Conclusion", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "transform group-hover:translate-x-1 transition-transform", children: "›" }) })
   ] });
 }
 export {

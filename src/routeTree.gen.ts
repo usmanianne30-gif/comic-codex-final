@@ -9,8 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ConclusionRouteImport } from './routes/conclusion'
+import { Route as CodexRouteImport } from './routes/codex'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ConclusionRoute = ConclusionRouteImport.update({
+  id: '/conclusion',
+  path: '/conclusion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CodexRoute = CodexRouteImport.update({
+  id: '/codex',
+  path: '/codex',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +31,50 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/codex': typeof CodexRoute
+  '/conclusion': typeof ConclusionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/codex': typeof CodexRoute
+  '/conclusion': typeof ConclusionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/codex': typeof CodexRoute
+  '/conclusion': typeof ConclusionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/codex' | '/conclusion'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/codex' | '/conclusion'
+  id: '__root__' | '/' | '/codex' | '/conclusion'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CodexRoute: typeof CodexRoute
+  ConclusionRoute: typeof ConclusionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/conclusion': {
+      id: '/conclusion'
+      path: '/conclusion'
+      fullPath: '/conclusion'
+      preLoaderRoute: typeof ConclusionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/codex': {
+      id: '/codex'
+      path: '/codex'
+      fullPath: '/codex'
+      preLoaderRoute: typeof CodexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +87,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CodexRoute: CodexRoute,
+  ConclusionRoute: ConclusionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,7 +1,4 @@
-import { N as reactExports, s as functionalUpdate$1, a as arraysEqual, g as createLRUCache, B as isPromise, C as isRedirect, A as isNotFound, w as invariant, f as createControlledPromise, X as rootRouteId, E as isServer$1, d as compileDecodeCharMap, Z as trimPath, W as rewriteBasepath, e as composeRewrites, M as processRouteTree, L as processRouteMasks, V as resolvePath, c as cleanPath, $ as trimPathRight, K as parseHref, n as executeRewriteInput, x as isDangerousProtocol, P as redirect, r as findSingleMatch, i as deepEqual, D as DEFAULT_PROTOCOL_ALLOWLIST, b as buildRouteBranch, v as interpolatePath, J as nullReplaceEqualDeep, S as replaceEqualDeep$1, H as last, h as decodePath, p as findFlatMatch, q as findRouteMatch, u as hasKeys, o as executeRewriteOutput, k as encodePathLikeUrl, _ as trimPathLeft, F as joinPaths, a1 as useRouter, j as dummyMatchContext, I as matchContext, T as requireReactDom, m as exactPathTest, Q as removeTrailingSlash, R as React, G as jsxRuntimeExports, z as isModuleNotFoundError, a0 as useHydrated, l as escapeHtml, y as isInlinableStylesheet, t as getAssetCrossOrigin, U as resolveManifestAssetLink, O as Outlet } from "./server-D8HdGaMr.js";
-import "node:async_hooks";
-import "node:stream/web";
-import "node:stream";
+import { N as reactExports, s as functionalUpdate$1, a as arraysEqual, g as createLRUCache, B as isPromise, C as isRedirect, A as isNotFound, w as invariant, f as createControlledPromise, X as rootRouteId, E as isServer$1, d as compileDecodeCharMap, Z as trimPath, W as rewriteBasepath, e as composeRewrites, M as processRouteTree, L as processRouteMasks, V as resolvePath, c as cleanPath, $ as trimPathRight, K as parseHref, n as executeRewriteInput, x as isDangerousProtocol, P as redirect, r as findSingleMatch, i as deepEqual, D as DEFAULT_PROTOCOL_ALLOWLIST, b as buildRouteBranch, v as interpolatePath, J as nullReplaceEqualDeep, S as replaceEqualDeep$1, H as last, h as decodePath, p as findFlatMatch, q as findRouteMatch, u as hasKeys, o as executeRewriteOutput, k as encodePathLikeUrl, _ as trimPathLeft, F as joinPaths, a1 as useRouter, j as dummyMatchContext, I as matchContext, T as requireReactDom, m as exactPathTest, Q as removeTrailingSlash, R as React, G as jsxRuntimeExports, z as isModuleNotFoundError, a0 as useHydrated, l as escapeHtml, y as isInlinableStylesheet, t as getAssetCrossOrigin, U as resolveManifestAssetLink, O as Outlet } from "./server-1zFDGI9i.js";
 var reactUse = reactExports.use;
 function useForwardedRef(ref) {
   const innerRef = reactExports.useRef(null);
@@ -1990,10 +1987,10 @@ var BaseRootRoute = class extends BaseRoute {
   }
 };
 function useMatch(opts) {
-  const router = useRouter();
+  const router2 = useRouter();
   const nearestMatchId = reactExports.useContext(opts.from ? dummyMatchContext : matchContext);
   const key = opts.from ?? nearestMatchId;
-  const matchStore = key ? opts.from ? router.stores.getRouteMatchStore(key) : router.stores.matchStores.get(key) : void 0;
+  const matchStore = key ? opts.from ? router2.stores.getRouteMatchStore(key) : router2.stores.matchStores.get(key) : void 0;
   {
     const match = matchStore?.get();
     if ((opts.shouldThrow ?? true) && !match) {
@@ -2046,13 +2043,13 @@ function useSearch(opts) {
   });
 }
 function useNavigate(_defaultOpts) {
-  const router = useRouter();
+  const router2 = useRouter();
   return reactExports.useCallback((options) => {
-    return router.navigate({
+    return router2.navigate({
       ...options,
       from: options.from ?? _defaultOpts?.from
     });
-  }, [_defaultOpts?.from, router]);
+  }, [_defaultOpts?.from, router2]);
 }
 function useRouteContext(opts) {
   return useMatch({
@@ -2062,14 +2059,14 @@ function useRouteContext(opts) {
 }
 requireReactDom();
 function useLinkProps(options, forwardedRef) {
-  const router = useRouter();
+  const router2 = useRouter();
   const innerRef = useForwardedRef(forwardedRef);
   const { activeProps, inactiveProps, activeOptions, to, preload: userPreload, preloadDelay: userPreloadDelay, preloadIntentProximity: _preloadIntentProximity, hashScrollIntoView, replace, startTransition, resetScroll, viewTransition, children, target, disabled, style, className, onClick, onBlur, onFocus, onMouseEnter, onMouseLeave, onTouchStart, ignoreBlocker, params: _params, search: _search, hash: _hash, state: _state, mask: _mask, reloadDocument: _reloadDocument, unsafeRelative: _unsafeRelative, from: _from, _fromLocation, ...propsSafeToSpread } = options;
   {
     const safeInternal = isSafeInternal(to);
     if (typeof to === "string" && !safeInternal && to.indexOf(":") > -1) try {
       new URL(to);
-      if (isDangerousProtocol(to, router.protocolAllowlist)) {
+      if (isDangerousProtocol(to, router2.protocolAllowlist)) {
         if (false) ;
         return {
           ...propsSafeToSpread,
@@ -2094,14 +2091,14 @@ function useLinkProps(options, forwardedRef) {
       };
     } catch {
     }
-    const next2 = router.buildLocation({
+    const next2 = router2.buildLocation({
       ...options,
       from: options.from
     });
-    const hrefOption2 = getHrefOption(next2.maskedLocation ? next2.maskedLocation.publicHref : next2.publicHref, next2.maskedLocation ? next2.maskedLocation.external : next2.external, router.history, disabled);
+    const hrefOption2 = getHrefOption(next2.maskedLocation ? next2.maskedLocation.publicHref : next2.publicHref, next2.maskedLocation ? next2.maskedLocation.external : next2.external, router2.history, disabled);
     const externalLink2 = (() => {
       if (hrefOption2?.external) {
-        if (isDangerousProtocol(hrefOption2.href, router.protocolAllowlist)) {
+        if (isDangerousProtocol(hrefOption2.href, router2.protocolAllowlist)) {
           return;
         }
         return hrefOption2.href;
@@ -2109,7 +2106,7 @@ function useLinkProps(options, forwardedRef) {
       if (safeInternal) return void 0;
       if (typeof to === "string" && to.indexOf(":") > -1) try {
         new URL(to);
-        if (isDangerousProtocol(to, router.protocolAllowlist)) {
+        if (isDangerousProtocol(to, router2.protocolAllowlist)) {
           if (false) ;
           return;
         }
@@ -2119,13 +2116,13 @@ function useLinkProps(options, forwardedRef) {
     })();
     const isActive2 = (() => {
       if (externalLink2) return false;
-      const currentLocation2 = router.stores.location.get();
+      const currentLocation2 = router2.stores.location.get();
       const exact = activeOptions?.exact ?? false;
       if (exact) {
-        if (!exactPathTest(currentLocation2.pathname, next2.pathname, router.basepath)) return false;
+        if (!exactPathTest(currentLocation2.pathname, next2.pathname, router2.basepath)) return false;
       } else {
-        const currentPathSplit = removeTrailingSlash(currentLocation2.pathname, router.basepath);
-        const nextPathSplit = removeTrailingSlash(next2.pathname, router.basepath);
+        const currentPathSplit = removeTrailingSlash(currentLocation2.pathname, router2.basepath);
+        const nextPathSplit = removeTrailingSlash(next2.pathname, router2.basepath);
         if (!(currentPathSplit.startsWith(nextPathSplit) && (currentPathSplit.length === nextPathSplit.length || currentPathSplit[nextPathSplit.length] === "/"))) return false;
       }
       if (activeOptions?.includeSearch ?? true) {
@@ -2232,7 +2229,7 @@ var Link = reactExports.forwardRef((props, ref) => {
   }
   return reactExports.createElement(_asChild, linkProps, children);
 });
-var Route$2 = class Route extends BaseRoute {
+var Route$4 = class Route extends BaseRoute {
   /**
   * @deprecated Use the `createRoute` function instead.
   */
@@ -2290,7 +2287,7 @@ var Route$2 = class Route extends BaseRoute {
   }
 };
 function createRoute(options) {
-  return new Route$2(options);
+  return new Route$4(options);
 }
 function createRootRouteWithContext() {
   return (options) => {
@@ -2520,7 +2517,7 @@ function Script({ attrs, children }) {
     return null;
   }
 }
-function buildTagsFromMatches(router, nonce, matches, assetCrossOrigin) {
+function buildTagsFromMatches(router2, nonce, matches, assetCrossOrigin) {
   const routeMeta = matches.map((match) => match.meta).filter(Boolean);
   const resultMeta = [];
   const metaByAttribute = {};
@@ -2574,7 +2571,7 @@ function buildTagsFromMatches(router, nonce, matches, assetCrossOrigin) {
       nonce
     }
   }));
-  const manifest = router.ssr?.manifest;
+  const manifest = router2.ssr?.manifest;
   const assetLinks = matches.map((match) => manifest?.routes[match.routeId]?.assets ?? []).filter(Boolean).flat(1).flatMap((asset) => {
     if (asset.tag === "link") {
       if (isInlinableStylesheet(manifest, asset)) return [];
@@ -2600,7 +2597,7 @@ function buildTagsFromMatches(router, nonce, matches, assetCrossOrigin) {
     return [];
   });
   const preloadLinks = [];
-  matches.map((match) => router.looseRoutesById[match.routeId]).forEach((route) => router.ssr?.manifest?.routes[route.id]?.preloads?.filter(Boolean).forEach((preload) => {
+  matches.map((match) => router2.looseRoutesById[match.routeId]).forEach((route) => router2.ssr?.manifest?.routes[route.id]?.preloads?.filter(Boolean).forEach((preload) => {
     const preloadLink = resolveManifestAssetLink(preload);
     preloadLinks.push({
       tag: "link",
@@ -2638,9 +2635,9 @@ function buildTagsFromMatches(router, nonce, matches, assetCrossOrigin) {
   ], (d) => JSON.stringify(d));
 }
 var useTags = (assetCrossOrigin) => {
-  const router = useRouter();
-  const nonce = router.options.ssr?.nonce;
-  return buildTagsFromMatches(router, nonce, router.stores.matches.get(), assetCrossOrigin);
+  const router2 = useRouter();
+  const nonce = router2.options.ssr?.nonce;
+  return buildTagsFromMatches(router2, nonce, router2.stores.matches.get(), assetCrossOrigin);
 };
 function uniqBy(arr, fn) {
   const seen = /* @__PURE__ */ new Set();
@@ -2661,13 +2658,13 @@ function HeadContent(props) {
   })) });
 }
 var Scripts = () => {
-  const router = useRouter();
-  const nonce = router.options.ssr?.nonce;
+  const router2 = useRouter();
+  const nonce = router2.options.ssr?.nonce;
   const getAssetScripts = (matches) => {
     const assetScripts = [];
-    const manifest = router.ssr?.manifest;
+    const manifest = router2.ssr?.manifest;
     if (!manifest) return [];
-    matches.map((match) => router.looseRoutesById[match.routeId]).forEach((route) => manifest.routes[route.id]?.assets?.filter((d) => d.tag === "script").forEach((asset) => {
+    matches.map((match) => router2.looseRoutesById[match.routeId]).forEach((route) => manifest.routes[route.id]?.assets?.filter((d) => d.tag === "script").forEach((asset) => {
       assetScripts.push({
         tag: "script",
         attrs: {
@@ -2689,14 +2686,14 @@ var Scripts = () => {
     children
   }));
   {
-    const activeMatches = router.stores.matches.get();
+    const activeMatches = router2.stores.matches.get();
     const assetScripts = getAssetScripts(activeMatches);
-    return renderScripts(router, getScripts(activeMatches), assetScripts);
+    return renderScripts(router2, getScripts(activeMatches), assetScripts);
   }
 };
-function renderScripts(router, scripts, assetScripts) {
+function renderScripts(router2, scripts, assetScripts) {
   let serverBufferedScript = void 0;
-  if (router.serverSsr) serverBufferedScript = router.serverSsr.takeBufferedScripts();
+  if (router2.serverSsr) serverBufferedScript = router2.serverSsr.takeBufferedScripts();
   const allScripts = [...scripts, ...assetScripts];
   if (serverBufferedScript) allScripts.unshift(serverBufferedScript);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: allScripts.map((asset, i) => /* @__PURE__ */ reactExports.createElement(Asset, {
@@ -4663,7 +4660,7 @@ var QueryClientProvider = ({
   }, [client]);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientContext.Provider, { value: client, children });
 };
-const appCss = "/assets/styles-DDdAn_1i.css";
+const appCss = "/assets/styles-B5Pn-snv.css";
 function NotFoundComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -4681,7 +4678,7 @@ function NotFoundComponent() {
 }
 function ErrorComponent({ error, reset }) {
   console.error(error);
-  const router = useRouter();
+  const router2 = useRouter();
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl font-semibold tracking-tight text-foreground", children: "This page didn't load" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "Something went wrong on our end. You can try refreshing or head back home." }),
@@ -4690,7 +4687,7 @@ function ErrorComponent({ error, reset }) {
         "button",
         {
           onClick: () => {
-            router.invalidate();
+            router2.invalidate();
             reset();
           },
           className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
@@ -4708,7 +4705,7 @@ function ErrorComponent({ error, reset }) {
     ] })
   ] }) });
 }
-const Route$1 = createRootRouteWithContext()({
+const Route$3 = createRootRouteWithContext()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -4744,12 +4741,16 @@ function RootShell({ children }) {
   ] });
 }
 function RootComponent() {
-  const { queryClient } = Route$1.useRouteContext();
+  const { queryClient } = Route$3.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter = () => import("./index-BZADiVQY.js");
-const Route2 = createFileRoute("/")({
-  component: lazyRouteComponent($$splitComponentImporter, "component"),
+const $$splitComponentImporter$2 = () => import("./conclusion-cjiNFj3p.js");
+const Route$2 = createFileRoute("/conclusion")({
+  component: lazyRouteComponent($$splitComponentImporter$2, "component")
+});
+const $$splitComponentImporter$1 = () => import("./codex-_y59PDyT.js");
+const Route$1 = createFileRoute("/codex")({
+  component: lazyRouteComponent($$splitComponentImporter$1, "component"),
   head: () => ({
     meta: [{
       title: "Right-Click Codex — A Comic Commonplace Book"
@@ -4770,25 +4771,46 @@ const Route2 = createFileRoute("/")({
     }]
   })
 });
+const $$splitComponentImporter = () => import("./index-Cyeet5GJ.js");
+const Route2 = createFileRoute("/")({
+  component: lazyRouteComponent($$splitComponentImporter, "component")
+});
+const ConclusionRoute = Route$2.update({
+  id: "/conclusion",
+  path: "/conclusion",
+  getParentRoute: () => Route$3
+});
+const CodexRoute = Route$1.update({
+  id: "/codex",
+  path: "/codex",
+  getParentRoute: () => Route$3
+});
 const IndexRoute = Route2.update({
   id: "/",
   path: "/",
-  getParentRoute: () => Route$1
+  getParentRoute: () => Route$3
 });
 const rootRouteChildren = {
-  IndexRoute
+  IndexRoute,
+  CodexRoute,
+  ConclusionRoute
 };
-const routeTree = Route$1._addFileChildren(rootRouteChildren)._addFileTypes();
+const routeTree = Route$3._addFileChildren(rootRouteChildren)._addFileTypes();
 const getRouter = () => {
   const queryClient = new QueryClient();
-  const router = createRouter({
+  const router2 = createRouter({
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0
   });
-  return router;
+  return router2;
 };
-export {
+const router = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
   getRouter
+}, Symbol.toStringTag, { value: "Module" }));
+export {
+  Link as L,
+  router as r
 };
