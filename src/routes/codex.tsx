@@ -477,7 +477,7 @@ function Index() {
                   EXPLANATION
                 </div>
                 {stage >= 3 ? (
-                  <div className="font-hand text-xl leading-snug text-ink animate-scribble space-y-3 max-h-[50vh] overflow-y-auto pr-2">
+                  <div className="font-hand text-xl leading-snug text-ink animate-scribble space-y-3 overflow-y-auto pr-2" style={{ height: "240px", scrollbarWidth: "thin" }}>
                     {menu.entry.explanation.split(/\n\n+/).map((para, i) => (
                       <p key={i}>{para}</p>
                     ))}
@@ -531,7 +531,7 @@ function Index() {
                   <div className="font-display tracking-wider text-lg text-ink">THEORY</div>
                   <div className="font-marker text-[10px] text-ink/70">marginalia</div>
                 </div>
-                <div className="p-4 relative">
+                <div className="p-4 relative overflow-y-auto pr-2" style={{ height: "460px", scrollbarWidth: "thin" }}>
                   {/* faux footnote rule */}
                   <div className="absolute left-4 right-4 top-2 border-t border-dashed border-ink/30" />
                   <p
