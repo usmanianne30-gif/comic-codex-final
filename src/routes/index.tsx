@@ -278,7 +278,7 @@ function Index() {
       <aside
         className="absolute font-hand flex flex-col gap-2"
         style={{
-          top: 40, left: 40, width: 260, zIndex: 10,
+          top: 40, left: 80, width: 260, zIndex: 10,
           background: "var(--paper)",
           padding: "16px",
           boxShadow: "6px 6px 0 var(--ink)",
@@ -314,7 +314,7 @@ function Index() {
       <h1
         className="absolute font-display text-pop-red"
         style={{
-          top: 80, left: 340,
+          top: 80, left: 380,
           fontSize: "clamp(56px, 9vw, 128px)",
           letterSpacing: "0.04em",
           lineHeight: 0.95,
@@ -329,7 +329,7 @@ function Index() {
 
       <p
         className="absolute font-hand text-ink"
-        style={{ top: 260, left: 346, fontSize: 32, lineHeight: 1.1, transform: "rotate(-1deg)", zIndex: 2, maxWidth: 560 }}
+        style={{ top: 340, left: 386, fontSize: 32, lineHeight: 1.1, transform: "rotate(-1deg)", zIndex: 2, maxWidth: 560 }}
       >
         a bright little commonplace book — half comic, half notebook —
         that only speaks when you <span className="px-2 py-0.5 halftone-yellow ink-border">right-click</span>.
@@ -338,7 +338,7 @@ function Index() {
       {/* instruction card */}
       <section
         className="absolute paper ink-border ink-shadow p-6 max-w-sm"
-        style={{ top: 360, left: 346, background: "var(--paper)", transform: "rotate(-0.5deg)", zIndex: 2 }}
+        style={{ top: 460, left: 386, background: "var(--paper)", transform: "rotate(-0.5deg)", zIndex: 2 }}
       >
         <div className="font-marker text-2xl mb-2">how it works →</div>
         <ol className="font-body text-base space-y-2">
