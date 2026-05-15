@@ -230,19 +230,21 @@ function PanelArt({ art, index, setIndex }: { art: string | string[], index: num
   const isImage = current.startsWith("/");
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-      {isImage ? (
-        <img
-          src={current}
-          alt="Comic Panel"
-          className="max-w-full max-h-full object-contain animate-pop-in"
-          onContextMenu={(e) => e.preventDefault()}
-        />
-      ) : (
-        <div className="w-1/2 h-1/2 animate-pop-in">
-          {ART[current as keyof typeof ART]}
-        </div>
-      )}
+    <div className="relative w-full h-full overflow-y-auto scrollbar-thin">
+      <div className="min-h-full flex items-center justify-center p-2">
+        {isImage ? (
+          <img
+            src={current}
+            alt="Comic Panel"
+            className="w-full h-auto object-contain animate-pop-in"
+            onContextMenu={(e) => e.preventDefault()}
+          />
+        ) : (
+          <div className="w-1/2 h-1/2 animate-pop-in">
+            {ART[current as keyof typeof ART]}
+          </div>
+        )}
+      </div>
 
       {images.length > 1 && (
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none" style={{ zIndex: 20 }}>
@@ -293,7 +295,7 @@ function Index() {
 
   const openEntry = useCallback((index: number, x: number, y: number) => {
     const entry = ENTRIES[index];
-    const W = 360, H = 440, THEORY_W = 320, GAP = 12;
+    const W = 450, H = 500, THEORY_W = 320, GAP = 12;
     // make sure there's room for the theory drawer on the right; otherwise flip it
     const roomRight = window.innerWidth - x - W - GAP;
     const side: "right" | "left" = roomRight >= THEORY_W + 16 ? "right" : "left";
@@ -486,19 +488,19 @@ function Index() {
 
             {/* PANEL */}
             <div className="ink-border bg-paper flex flex-col" style={{ boxShadow: "6px 6px 0 var(--ink)", marginTop: -3 }}>
-              <div className="relative overflow-hidden bg-paper" style={{ minHeight: "200px", maxHeight: "60vh" }}>
+              <div className="relative bg-paper" style={{ height: "400px", maxHeight: "70vh" }}>
                 {stage >= 2 && (
                   <>
-                    <div className={`absolute inset-0 ${TONE_BG[menu.entry.tone]} opacity-60`} />
+                    <div className={`absolute inset-0 ${TONE_BG[menu.entry.tone]} opacity-60 pointer-events-none`} />
                     <PanelArt art={menu.entry.panel.art} index={panelIndex} setIndex={setPanelIndex} />
                     
                     <div
-                      className="absolute top-3 right-3 font-display text-3xl text-pop-red animate-pop-in pointer-events-none"
-                      style={{ WebkitTextStroke: "1.5px var(--ink)", transform: "rotate(8deg)", zIndex: 10 }}
+                      className="absolute top-3 right-5 font-display text-3xl text-pop-red animate-pop-in pointer-events-none"
+                      style={{ WebkitTextStroke: "1.5px var(--ink)", transform: "rotate(8deg)", zIndex: 30 }}
                     >
                       {menu.entry.panel.sfx}
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 m-2 ink-border bg-paper px-3 py-1 font-body text-sm animate-slide-up z-10 pointer-events-none">
+                    <div className="absolute bottom-4 left-4 right-4 ink-border bg-paper px-3 py-1 font-body text-sm animate-slide-up z-30 pointer-events-none" style={{ boxShadow: "3px 3px 0 var(--ink)" }}>
                       {menu.entry.panel.caption}
                     </div>
                   </>
