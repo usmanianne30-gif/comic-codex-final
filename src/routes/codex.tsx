@@ -235,10 +235,9 @@ function Index() {
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed)) {
-          setRevealedIds(parsed);
-          idxRef.current = parsed.length;
-        }
+          const valid = parsed.filter(id => typeof id === 'number' && id < ENTRIES.length);
+          setRevealedIds(valid);
+          idxRef.current = valid.length;
       } catch (e) {}
     }
   }, []);
