@@ -304,7 +304,7 @@ function Index() {
       : window.innerWidth - W - 16;
     const minX = side === "left" ? THEORY_W + GAP + 16 : 16;
     const clampedX = Math.max(minX, Math.min(x, maxX));
-    const clampedY = Math.max(16, Math.min(y, window.innerHeight - H - 16));
+    const clampedY = Math.max(16, Math.min(y, window.innerHeight + window.scrollY - H - 16));
 
     stageTimers.current.forEach(clearTimeout);
     setStage(0);
@@ -334,7 +334,7 @@ function Index() {
       const index = idxRef.current % ENTRIES.length;
       idxRef.current += 1;
       setCount((c) => c + 1);
-      openEntry(index, e.clientX, e.clientY);
+      openEntry(index, e.clientX, e.clientY + window.scrollY);
     };
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -383,7 +383,7 @@ function Index() {
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
-                    openEntry(id, 340, Math.max(16, e.clientY - 150));
+                    openEntry(id, 340, Math.max(16, e.clientY + window.scrollY - 150));
                   }}
                   className={`text-left w-full px-3 py-2 ink-border transition-transform hover:-translate-y-1 ${TONE_BG[ENTRIES[id].tone]} opacity-90 hover:opacity-100`}
                   style={{ boxShadow: "3px 3px 0 var(--ink)" }}
