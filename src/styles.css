@@ -79,7 +79,7 @@
       /* halftone dots */
       radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--ink) 18%, transparent) 1px, transparent 1.6px);
     background-size: 100% 32px, 14px 14px;
-    background-attachment: fixed;
+    background-attachment: local;
   }
   body::before {
     content: "";
