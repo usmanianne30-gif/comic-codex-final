@@ -6,7 +6,7 @@ export const Route = createFileRoute("/conclusion")({
 
 function Conclusion() {
   return (
-    <main className="relative min-h-screen overflow-hidden flex items-center justify-center p-8 bg-paper">
+    <main className="relative min-h-screen overflow-y-auto flex items-center justify-center p-8 py-20 bg-paper">
       {/* tape decorations */}
       <span className="tape" style={{ top: 30, right: "12%", transform: "rotate(5deg)" }} />
       <span className="tape" style={{ bottom: 40, right: "20%", transform: "rotate(-3deg)", background: "color-mix(in oklab, var(--pop-blue) 70%, white)" }} />
