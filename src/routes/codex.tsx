@@ -277,7 +277,7 @@ function Index() {
   const [theorySide, setTheorySide] = useState<"right" | "left">("right");
   const [count, setCount] = useState(0);
   const [panelIndex, setPanelIndex] = useState(0);
-  const [revealedIds, setRevealedIds] = useState<number[]>([]);
+  const [revealedIds, setRevealedIds] = useState<number[]>([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
   const idxRef = useRef(0);
   const stageTimers = useRef<number[]>([]);
 
@@ -396,6 +396,13 @@ function Index() {
           </ul>
         )}
       </aside>
+
+      <Link
+        to="/"
+        className="absolute top-6 left-6 font-marker text-lg text-ink/40 hover:text-ink transition-colors z-20"
+      >
+        ← back to intro
+      </Link>
 
       <h1
         className="absolute font-display text-pop-red"
