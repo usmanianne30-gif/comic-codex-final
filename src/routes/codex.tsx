@@ -271,7 +271,7 @@ function PanelArt({ art, index, setIndex }: { art: string | string[], index: num
 }
 
 function Index() {
-  const [menu, setMenu] = useState<{ x: number; y: number; entry: Entry; key: number } | null>(null);
+  const [menu, setMenu] = useState<{ x: number; y: number; entry: Entry; id: number; key: number } | null>(null);
   const [stage, setStage] = useState<0 | 1 | 2 | 3>(0);
   const [theoryOpen, setTheoryOpen] = useState(false);
   const [theorySide, setTheorySide] = useState<"right" | "left">("right");
@@ -311,7 +311,7 @@ function Index() {
     setTheoryOpen(false);
     setTheorySide(side);
     setPanelIndex(0);
-    setMenu({ x: clampedX, y: clampedY, entry, key: Date.now() });
+    setMenu({ x: clampedX, y: clampedY, entry, id: index, key: Date.now() });
     stageTimers.current = [
       window.setTimeout(() => setStage(1), 50),
       window.setTimeout(() => setStage(2), 650),
@@ -469,12 +469,12 @@ function Index() {
         <div
           data-codex-panel
           key={menu.key}
-          className="fixed"
+          className="absolute"
           style={{ left: menu.x, top: menu.y, zIndex: 50 }}
           onContextMenu={(e) => e.preventDefault()}
         >
           {/* main panel */}
-          <div className="relative animate-pop-in" style={{ width: 360 }}>
+          <div className="relative animate-pop-in" style={{ width: 450 }}>
             {/* THEME header */}
             <div
               className={`ink-border ${TONE_BG[menu.entry.tone]} px-4 py-2 flex items-center justify-between`}
@@ -483,7 +483,7 @@ function Index() {
               <div className="font-display tracking-wider text-2xl text-ink">
                 {stage >= 1 ? menu.entry.theme.toUpperCase() : "…"}
               </div>
-              <div className="font-marker text-xs text-ink/70">№ {count.toString().padStart(3, "0")}</div>
+              <div className="font-marker text-xs text-ink/70">№ {menu.id.toString().padStart(3, "0")}</div>
             </div>
 
             {/* PANEL */}
