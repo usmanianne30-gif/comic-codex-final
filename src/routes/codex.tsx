@@ -18,9 +18,13 @@ export const Route = createFileRoute("/codex")({
 
 type Entry = {
   theme: string;
-  panel: { caption: string; sfx: string; art: "lightbulb" | "speedlines" | "explosion" | "thoughtcloud" | "eye" | "key" | "spiral" | "heart" };
+  panel: {
+    caption: string;
+    sfx: string;
+    /** Either a built-in SVG key or a path to a custom image (or an array of them) */
+    art: string | string[];
+  };
   explanation: string;
-  /** A more theoretical / academic reading of the theme. Leave undefined to show a placeholder. */
   theory?: string;
   tone: "yellow" | "pink" | "blue" | "mint";
 };
@@ -31,7 +35,7 @@ const THEORY_PLACEHOLDER =
 const ENTRIES: Entry[] = [
   {
     theme: "CancerVixen—The Diagnosis",
-    panel: { caption: "OH MY GOD I'M SICK!", sfx: "KRRSSH!", art: "explosion" },
+    panel: { caption: "OH MY GOD I'M SICK!", sfx: "KRRSSH!", art: ["/panels/cancervixen-diagnosis.png", "/panels/cancervixen-shower.png"] },
     explanation:
       "The panel shows explosive, radiating blonde hair filling the frame before Marisa's mouth opens to scream. The typography escalates across three panels: from conversational narration to \"OH MY GOD I'M SICK!\" in oversized letters against a night sky. The text specifies \"10-12-03 A.M. THE NEXT MILLISECOND,\" claiming documentary precision. The second panel's \"(S)MOTHER\" uses parenthetical notation to layer meaning: protective/suffocating mother compressed into typographic innovation. The third panel reduces Marisa's body to a hunched shoulder and hand covering her face, small against the suburban housee. The phone becomes a recurring motif, like technology transmitting devastating news.",
     theory:
@@ -40,7 +44,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "CancerVixen—Performing Femininity Under Crisis",
-    panel: { caption: "I PUT ON 'BRAVE' LIPSTICK...", sfx: "dialing...", art: "eye" },
+    panel: { caption: "I PUT ON 'BRAVE' LIPSTICK...", sfx: "dialing...", art: "/panels/cancervixen-lipstick.png" },
     explanation:
       "Extreme close-up of manicured fingers holding branded lipstick: \"BRAVE LIPSTICK BY M.A.C.\" The caption narrates: \"I PUT ON 'BRAVE' LIPSTICK BY M.A.C. I NEEDED SOMETHING, ANYTHING, THAT WOULD HELP ME FACE PLEASE GOD WILLING MY FUTURE HUSBAND...\" The ellipsis trails off. Lower right shows phone screen: \"T-Mobile Dialling Silvano.\" The brand name is prominent. The yellow caption box's text interrupts itself: \"PLEASE GOD WILLING\" breaks the sentence's flow, visualising panic's interruption of thought.",
     theory:
@@ -49,7 +53,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Shakuntala—The Mutual Gaze",
-    panel: { caption: "WHAT A HANDSOME MAN HE IS!", sfx: "sigh", art: "heart" },
+    panel: { caption: "WHAT A HANDSOME MAN HE IS!", sfx: "sigh", art: "/panels/shakuntala-gaze.png" },
     explanation:
       "Split thought-bubbles show King Dushyant and Shakuntala's first encounter: \"OH! HOW BEAUTIFUL SHE IS\" and \"WHAT A HANDSOME MAN HE IS!\" The King occupies the left panel in profile, close-up, with an elaborate crown and jewellery. Shakuntala appears right, slightly smaller, with downcast eyes and a slight smile. Pink background frames both. Amar Chitra Katha style creates an idealised, iconic representation—clear lines, bright colours, beautiful types. The panel above shows them sharing fruit, King's promise: \"DON'T WORRY, I SHALL REMAIN HERE TILL I DESTROY ALL THE DEMONS. / WE SHALL ALWAYS BE GRATEFUL TO YOU.\"",
     theory:
@@ -58,7 +62,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Shakuntala—The Ring (Material Proof)",
-    panel: { caption: "WHERE IS IT?", sfx: "gasp!", art: "key" },
+    panel: { caption: "WHERE IS IT?", sfx: "gasp!", art: "/panels/shakuntala-ring.png" },
     explanation:
       "The middle panel shows Shakuntala's shocked face in close-up, mouth agape. Companion says: \"SHAKUNTALA, WHY DON'T YOU SHOW THE RING WHICH THE KING HAD GIVEN YOU?\" Bottom panel caption responds: \"HERE IS THE RING YOU GAVE ME—OH! WHERE IS IT? I HAD NEVER REMOVED IT.\" Shakuntala's face, veiled in pink fabric, shows widened eyes and a raised hand in dismay. The top panel shows the hermit's question to the King: \"DON'T YOU REMEMBER YOUR WIFE, SHAKUNTALA?\" King's response: \"I DON'T KNOW ANYONE BY THAT NAME. YOU MUST BE MISTAKEN.\" His thought bubble: \"HOW STRANGE THAT A MAN SHOULD FORGET HIS OWN WIFE.\"",
     theory:
@@ -220,12 +224,57 @@ const TONE_BG: Record<Entry["tone"], string> = {
   mint: "bg-pop-mint",
 };
 
+function PanelArt({ art, index, setIndex }: { art: string | string[], index: number, setIndex: (i: number) => void }) {
+  const images = Array.isArray(art) ? art : [art];
+  const current = images[index % images.length];
+  const isImage = current.startsWith("/");
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {isImage ? (
+        <img
+          src={current}
+          alt="Comic Panel"
+          className="max-w-full max-h-full object-contain animate-pop-in"
+          onContextMenu={(e) => e.preventDefault()}
+        />
+      ) : (
+        <div className="w-1/2 h-1/2 animate-pop-in">
+          {ART[current as keyof typeof ART]}
+        </div>
+      )}
+
+      {images.length > 1 && (
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none" style={{ zIndex: 20 }}>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setIndex(index > 0 ? index - 1 : images.length - 1); }}
+            className="pointer-events-auto ink-border bg-paper w-8 h-8 flex items-center justify-center font-display text-xl hover:bg-pop-yellow transition-colors"
+            style={{ boxShadow: "2px 2px 0 var(--ink)" }}
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setIndex(index + 1); }}
+            className="pointer-events-auto ink-border bg-paper w-8 h-8 flex items-center justify-center font-display text-xl hover:bg-pop-yellow transition-colors"
+            style={{ boxShadow: "2px 2px 0 var(--ink)" }}
+          >
+            ›
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Index() {
   const [menu, setMenu] = useState<{ x: number; y: number; entry: Entry; key: number } | null>(null);
   const [stage, setStage] = useState<0 | 1 | 2 | 3>(0);
   const [theoryOpen, setTheoryOpen] = useState(false);
   const [theorySide, setTheorySide] = useState<"right" | "left">("right");
   const [count, setCount] = useState(0);
+  const [panelIndex, setPanelIndex] = useState(0);
   const [revealedIds, setRevealedIds] = useState<number[]>([]);
   const idxRef = useRef(0);
   const stageTimers = useRef<number[]>([]);
@@ -259,6 +308,7 @@ function Index() {
     setStage(0);
     setTheoryOpen(false);
     setTheorySide(side);
+    setPanelIndex(0);
     setMenu({ x: clampedX, y: clampedY, entry, key: Date.now() });
     stageTimers.current = [
       window.setTimeout(() => setStage(1), 50),
@@ -435,21 +485,20 @@ function Index() {
             </div>
 
             {/* PANEL */}
-            <div className="ink-border bg-paper" style={{ boxShadow: "6px 6px 0 var(--ink)", marginTop: -3 }}>
-              <div className="relative aspect-[4/3] overflow-hidden bg-paper">
+            <div className="ink-border bg-paper flex flex-col" style={{ boxShadow: "6px 6px 0 var(--ink)", marginTop: -3 }}>
+              <div className="relative overflow-hidden bg-paper" style={{ minHeight: "200px", maxHeight: "60vh" }}>
                 {stage >= 2 && (
                   <>
                     <div className={`absolute inset-0 ${TONE_BG[menu.entry.tone]} opacity-60`} />
-                    <div className="absolute inset-0 flex items-center justify-center text-ink animate-pop-in">
-                      <div className="w-1/2 h-1/2">{ART[menu.entry.panel.art]}</div>
-                    </div>
+                    <PanelArt art={menu.entry.panel.art} index={panelIndex} setIndex={setPanelIndex} />
+                    
                     <div
-                      className="absolute top-3 right-3 font-display text-3xl text-pop-red animate-pop-in"
-                      style={{ WebkitTextStroke: "1.5px var(--ink)", transform: "rotate(8deg)" }}
+                      className="absolute top-3 right-3 font-display text-3xl text-pop-red animate-pop-in pointer-events-none"
+                      style={{ WebkitTextStroke: "1.5px var(--ink)", transform: "rotate(8deg)", zIndex: 10 }}
                     >
                       {menu.entry.panel.sfx}
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 m-2 ink-border bg-paper px-3 py-1 font-body text-sm animate-slide-up">
+                    <div className="absolute bottom-0 left-0 right-0 m-2 ink-border bg-paper px-3 py-1 font-body text-sm animate-slide-up z-10 pointer-events-none">
                       {menu.entry.panel.caption}
                     </div>
                   </>
