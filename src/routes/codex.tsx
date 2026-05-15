@@ -93,15 +93,6 @@ const ENTRIES: Entry[] = [
     tone: "blue",
   },
   {
-    theme: "Watchmen—\"They Called Me Sally Jupiter\"",
-    panel: { caption: "THE PHOTOGRAPH LIES IN THE SAND.", sfx: "rustle", art: "spiral" },
-    explanation:
-      "A series of panels shows older Sally Jupiter (original Silk Spectre) in profile, ageing, body no longer conventionally attractive. Caption reads: \"IT'S 1966, AND SHE'S PACKING, TEARFUL; CARELESS WITH ANGER. / THE PHOTOGRAPH / LIES IN THE SAND / AT MY FEET.\" Rendered in darker tones with visible ageing marks. Face partially obscured in profile. Reference to \"the photograph\" suggests her identity is tied to the image as a young woman.",
-    theory:
-      "This represents the male representation of feminine ageing as diminishment, loss of value measured against youthful sexuality. Sally appears as a memory, historical artefact, object of narrative reflection rather than a subject claiming interpretive authority. The caption's reference to \"the photograph\" reveals that Sally's value is derived entirely from visual/sexual appeal. Now aged, panels render her with visible resignation—body no longer a site of power but of loss and regret. This differs radically from how Bechdel represents her own ageing, or Satrapi represents her mother's historical displacement. In Fun Home and Persepolis, ageing women are rendered with full complexity—intellectual, emotional, and historical significance preserved as bodies change. In Watchmen, Sally's ageing is rendered primarily as diminishment, past sexuality the measure against which the present is found wanting. The panel makes visible male representation's temporal logic: women are valuable when young and sexualized; ageing is inherently tragic. By contrast, Bechdel/Satrapi represent ageing as a complex temporal unfolding rather than a decline from a youthful ideal. The formal positioning—Sally in profile, partially obscured—literally removes her from full visual presence, marking her as no longer worthy of direct representational attention now that her sexual value has expired.",
-    tone: "mint",
-  },
-  {
     theme: "Watchmen—\"We Don't Have Much Time\"",
     panel: { caption: "LISTEN, EVERYONE MEET IN THE LOBBY...", sfx: "tick. tick.", art: "speedlines" },
     explanation:
