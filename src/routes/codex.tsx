@@ -30,78 +30,122 @@ const THEORY_PLACEHOLDER =
 
 const ENTRIES: Entry[] = [
   {
-    theme: "On the Visual Scream",
+    theme: "CancerVixen—The Diagnosis",
     panel: { caption: "OH MY GOD I'M SICK!", sfx: "KRRSSH!", art: "explosion" },
     explanation:
-      "The explosion of wild, radiating blonde hair fills the top-left panel, transforming Marisa's head into a visual scream before her mouth opens. The hair, rendered in aggressive, uncontrolled lines, literalizes the phrase \"hair-raising\" terror, making visible the invisible shock of diagnosis. This formal choice is crucial: Marchetto refuses to contain female panic within decorous bounds. The typography escalates across three panels—from conversational \"10-12-03 A.M. THE NEXT MILLISECOND I HAD TO CALL MY PARENTS\" to the visual assault of \"OH MY GOD I'M SICK!\" rendered in oversized letters against a night sky dotted with stars that might be tears, might be cosmic indifference.\n\nWhat's striking is Marchetto's insistence on precise temporality: \"10-12-03 A.M. THE NEXT MILLISECOND.\" This specificity claims documentary authority, positioning her lived experience against medical abstraction. The second panel's text—\"OF COURSE MY (S)MOTHER PICKED UP THE PHONE FIRST\"—employs the parenthetical \"(S)\" to layer meaning: protective mother/suffocating mother, compressed into one mark. This typographic innovation demonstrates comics' unique capacity to visualize ambivalence spatially. The phone itself becomes a recurring motif throughout these panels—technology as both connector and alienator, through which devastating news travels at speed.",
+      "The panel shows explosive, radiating blonde hair filling the frame before Marisa's mouth opens to scream. The typography escalates across three panels: from conversational narration to \"OH MY GOD I'M SICK!\" in oversized letters against a night sky. The text specifies \"10-12-03 A.M. THE NEXT MILLISECOND,\" claiming documentary precision. The second panel's \"(S)MOTHER\" uses parenthetical notation to layer meaning: protective/suffocating mother compressed into typographic innovation. The third panel reduces Marisa's body to a hunched shoulder and hand covering her face, small against the suburban house and a worried mother figure. The phone becomes a recurring motif—technology transmitting devastating news.",
+    theory:
+      "This represents the crisis of medical objectification and the autobiographical claim to subjective authority. By drawing herself receiving a diagnosis, Marchetto refuses the medical gaze that would reduce her to \"cancer patient.\" The visual scream—hair as terror made visible claims representational space for panic, refusing decorous containment of female suffering. The temporal precision (\"10-12-03 A.M. THE NEXT MILLISECOND\") asserts documentary authority, positioning lived experience against medical abstraction. The typographic innovation demonstrates comics' capacity to visualise emotional layering that prose cannot capture. Most critically, by drawing this moment herself, Marchetto maintains control over how her body is represented even as medical institutions work to reconstitute her as a clinical object. Self-representation becomes a survival strategy: she will be seen, but on her terms.",
     tone: "pink",
   },
   {
-    theme: "On Memory",
-    panel: { caption: "The drawer remembered him.", sfx: "creak…", art: "key" },
-    explanation: "We don't store memories — objects do. A key, a smell, a song; they are the librarians of the self, lending us back to ourselves on quiet afternoons.",
-    tone: "blue",
-  },
-  {
-    theme: "On Beginnings",
-    panel: { caption: "Page one. Again.", sfx: "FWIP!", art: "lightbulb" },
-    explanation: "Every beginning is a forgery of the first one. The trick is not to wait for thunder — it is to strike the match yourself, indoors, where no one is watching.",
+    theme: "CancerVixen—Performing Femininity Under Crisis",
+    panel: { caption: "I PUT ON 'BRAVE' LIPSTICK...", sfx: "dialing...", art: "eye" },
+    explanation:
+      "Extreme close-up of manicured fingers holding branded lipstick: \"BRAVE LIPSTICK BY M.A.C.\" The caption narrates: \"I PUT ON 'BRAVE' LIPSTICK BY M.A.C. I NEEDED SOMETHING, ANYTHING, THAT WOULD HELP ME FACE PLEASE GOD WILLING MY FUTURE HUSBAND...\" The ellipsis trails off. Lower right shows phone screen: \"T-Mobile Dialling Silvano.\" The brand name is prominent. The yellow caption box's text interrupts itself: \"PLEASE GOD WILLING\" breaks the sentence's flow, visualising panic's interruption of thought.",
+    theory:
+      "This represents the strategic deployment of femininity as a survival mechanism within patriarchal structures. The lipstick, literally named \"BRAVE,\" transforms cosmetics from an imposed beauty standard into ritual armour. Yet Marchetto's formal choices prevent simple celebration: the brand prominence reminds us this is a consumer product, part of the beauty-industrial complex. The panel walks a razor's edge between critique and complicity. The interrupted syntax—\"HELP ME FACE PLEASE GOD WILLING MY FUTURE HUSBAND\"—recognises that she must now perform being both sick and marriageable. This is self-representation as doubled consciousness: Marchetto simultaneously performs femininity and analyses that performance. By drawing herself putting on lipstick, she claims authority over the meaning of this gesture. It's armour, not vanity; strategy, not capitulation. Male-created representation would not grant feminine beauty rituals this analytical complexity.",
     tone: "yellow",
   },
   {
-    theme: "On Loneliness",
-    panel: { caption: "He waved at the streetlight.", sfx: "...", art: "thoughtcloud" },
-    explanation: "Loneliness is not the absence of people but the absence of being recognised. A streetlight will do, briefly. So will a notebook.",
-    tone: "pink",
-  },
-  {
-    theme: "On Speed",
-    panel: { caption: "The city blurred past her bicycle.", sfx: "WHOOSH!!", art: "speedlines" },
-    explanation: "Speed is a kind of forgetting that feels like freedom. Slow down once a week, just to remember which buildings you've been ignoring.",
+    theme: "Shakuntala—The Mutual Gaze",
+    panel: { caption: "WHAT A HANDSOME MAN HE IS!", sfx: "sigh", art: "heart" },
+    explanation:
+      "Split thought-bubbles show King Dushyant and Shakuntala's first encounter: \"OH! HOW BEAUTIFUL SHE IS\" and \"WHAT A HANDSOME MAN HE IS!\" The King occupies the left panel in profile, close-up, with an elaborate crown and jewellery. Shakuntala appears right, slightly smaller, with downcast eyes and a slight smile. Pink background frames both. Amar Chitra Katha style creates an idealised, iconic representation—clear lines, bright colours, beautiful types. The panel above shows them sharing fruit, King's promise: \"DON'T WORRY, I SHALL REMAIN HERE TILL I DESTROY ALL THE DEMONS. / WE SHALL ALWAYS BE GRATEFUL TO YOU.\"",
+    theory:
+      "This represents the illusion of reciprocal recognition that disguises asymmetric power. The symmetric thought-bubbles suggest egalitarian mutual desire, but the formal construction reveals inequality: he is crowned (royal authority), she is smaller (subordinate). The Amar Chitra Katha style's iconicity is deeply political—Shakuntala's beauty is conventional, legible within patriarchal codes. This creates the central tension: if her beauty is so apparent, so readable, why must she later fight to be \"seen\" by this same King? The panel captures the moment before complication, when seeing and being seen appear reciprocal. The exchange economy establishes itself: King provides protection, hermitage provides hospitality, and Shakuntala, a beautiful object, circulates within this system. What appears as mutual recognition is actually the establishment of Shakuntala as an aesthetic object whose value depends on male seeing. This is not self-representation but representation within patriarchal visual codes that will later be revoked.",
     tone: "blue",
   },
   {
-    theme: "On Anger",
-    panel: { caption: "And then — the kettle.", sfx: "KA-POW!", art: "explosion" },
-    explanation: "Anger is grief in a louder coat. Listen for what it's protecting before you ask it to leave the room.",
-    tone: "pink",
-  },
-  {
-    theme: "On Attention",
-    panel: { caption: "She looked. Really looked.", sfx: "blink.", art: "eye" },
-    explanation: "Attention is the rarest and purest form of generosity. Most days we tip with loose change.",
+    theme: "Shakuntala—The Ring (Material Proof)",
+    panel: { caption: "WHERE IS IT?", sfx: "gasp!", art: "key" },
+    explanation:
+      "The middle panel shows Shakuntala's shocked face in close-up, mouth agape. Companion says: \"SHAKUNTALA, WHY DON'T YOU SHOW THE RING WHICH THE KING HAD GIVEN YOU?\" Bottom panel caption responds: \"HERE IS THE RING YOU GAVE ME—OH! WHERE IS IT? I HAD NEVER REMOVED IT.\" Shakuntala's face, veiled in pink fabric, shows widened eyes and a raised hand in dismay. The top panel shows the hermit's question to the King: \"DON'T YOU REMEMBER YOUR WIFE, SHAKUNTALA?\" King's response: \"I DON'T KNOW ANYONE BY THAT NAME. YOU MUST BE MISTAKEN.\" His thought bubble: \"HOW STRANGE THAT A MAN SHOULD FORGET HIS OWN WIFE.\"",
+    theory:
+      "This represents the precarity of female selfhood under systems requiring external validation. Shakuntala's embodied knowledge—memory, pregnancy, lived experience—proves insufficient. She needs the ring, the King's token, to authorise her own story. The ring's absence creates representational rupture: she has the experience but lacks the material signifier that would make it legible to patriarchal authority. The panel emphasises this through negative space—the missing ring becomes present through absence. The companion's suggestion to \"show the ring\" treats Shakuntala's subjectivity as a prosecutorial problem requiring evidence, as though her word carries no weight. The King's thought bubble—\"HOW STRANGE THAT A MAN SHOULD FORGET HIS OWN WIFE\"—reveals the violence: he acknowledges the strangeness while doing nothing to rectify it. This literalizes women's perpetual anxiety under patriarchy: selfhood, stories, and very existence remain subject to male recognition and memory. Without the material token of his giving, she becomes impossible to see, even standing visibly pregnant before him. This is the opposite of self-representation: Shakuntala cannot represent herself; she requires his representation of her to exist.",
     tone: "mint",
   },
   {
-    theme: "On Love",
-    panel: { caption: "Two cups, one kettle.", sfx: "ba-dump.", art: "heart" },
-    explanation: "Love is mostly logistics — who buys the milk, who answers the door — set on fire by something the logistics cannot explain.",
+    theme: "Shakuntala—Unveiling (Visibility Without Recognition)",
+    panel: { caption: "RAISE YOUR VEIL.", sfx: "rustle", art: "eye" },
+    explanation:
+      "Top panels show elderly companion commanding: \"SHAKUNTALA, RAISE YOUR VEIL. THE KING WILL SURELY REMEMBER YOU WHEN HE SEES YOUR FACE.\" Bottom-left shows Shakuntala in close-up, veiled, eyes downcast in modest suffering. Bottom-right shows King's response: \"YOUR FACE IS INDEED LOVELY, BUT I HAVE NEVER SEEN YOU BEFORE.\" Above, hermitage women crouch searching the ground: \"THE RING MUST HAVE FALLEN SOMEWHERE. LET US LOOK FOR IT.\" Bodies bent in supplicant postures while the King stands tall with a sceptre.",
+    theory:
+      "This represents the split between visibility-as-object and recognition-as-subject. The veil functions as a threshold between private (remembered, known) and public (forgotten, strange) feminine identity. The companion's faith that unveiling will trigger recognition assumes face serves as an authentic identity marker. Yet when Shakuntala unveils, the King sees \"lovely\" face, not her face—generic beauty rather than specific personhood. This crystallises how patriarchal seeing reduces women to aesthetic objects rather than recognising them as subjects with histories and claims. The composition visualises a power differential: the hermitage women crouch searching for evidence while King stands elevated. Shakuntala must prove herself through external validation (ring) while the King's word alone suffices. The formal grammar demonstrates how visibility and recognition diverge for women: she can be seen (as beautiful) without being recognised (as a known subject). Her unveiled face provokes aesthetic appreciation—\"INDEED LOVELY\"—but not memory, not acknowledgement, not the relational recognition that would constitute her as wife and mother. Visibility does not equal representational authority; being seen is not the same as being heard or believed.",
+    tone: "yellow",
+  },
+  {
+    theme: "Shakuntala—Speaking Back",
+    panel: { caption: "STOP YOUR CHATTER.", sfx: "silence", art: "thoughtcloud" },
+    explanation:
+      "Upper-left shows Shakuntala speaking, still veiled: \"DO YOU REMEMBER HOW ONE DAY YOU COLLECTED RAIN-WATER IN A LOTUS FLOWER AND GAVE IT TO MY PET FAWN TO DRINK BUT SHE REFUSED.\" Extended speech reclaims narrative authority. Upper-right shows Shakuntala's unveiled face in close-up, confrontational: \"YET WHEN I OFFERED IT, SHE DRANK IT GLADLY. SO YOU SAID—YOU ARE BOTH CHILDREN OF THE FOREST AND TRUST EACH OTHER...AND...\" King's dismissive hand gesture: \"STOP YOUR CHATTER. I REMEMBER NO SUCH THING.\" Bottom panels escalate: \"OH DUSHYANT! IT IS WICKED OF YOU TO DISOWN YOUR OWN WIFE\" fills speech bubble dominating the panel. King sits smiling; she stands impassioned.",
+    theory:
+      "This represents the claim to voice as a political act, even when structural conditions deny vindication. Shakuntala shifts from showing (unveiled face) to telling (remembered scene), from visual proof to verbal testimony. She invokes specific, intimate memory—rainwater, lotus, pet fawn—details only a participant could know. This move from object-to-be-seen to speaking-subject marks the crucial shift in representational politics. The King's command—\"STOP YOUR CHATTER\"—attempts to silence her, yet the visual composition grants her face equal panel space with his. The word \"WICKED\" names patriarchal violence explicitly, transforming misunderstanding into moral condemnation. Though the plot will deny her immediate vindication, she has claimed voice, refused silence, spoken truth to power. The panel's composition, giving her final words and central position, visually enacts this reclamation. This is a partial self-representation within a narrative she did not author: Shakuntala claims speech even though male creators (Kalidasa, Amar Chitra Katha artists) ultimately control her story. The formal limit reveals the political stakes: full self-representation requires not just voice within the narrative, but control over the narrative itself.",
     tone: "pink",
   },
   {
-    theme: "On Doubt",
-    panel: { caption: "He read the sentence twice.", sfx: "hmm…", art: "thoughtcloud" },
-    explanation: "Doubt is not the opposite of belief; it's the room belief lives in. Without walls, faith is just weather.",
+    theme: "Watchmen—\"I Don't Know What I Should Call You\"",
+    panel: { caption: "WHAT SHOULD I CALL YOU?", sfx: "glow", art: "lightbulb" },
+    explanation:
+      "The sequence shows Laurie Juspeczyk in a yellow costume against Dr Manhattan's blue, glowing form. Dialogue reads: \"I... I DON'T KNOW WHAT I SHOULD CALL YOU. DO YOU HAVE ANOTHER NAME, ASIDE FROM DR. MANHATTAN?\" Response: \"YES. / NAME'S / TON.\" Does not show physical consummation. Laurie's body is rendered in warm tones (yellow costume, flesh) adjacent to Jon's cool blue luminescence. Composition places her vulnerability against his post-human detachment.",
+    theory:
+      "This represents a male-created representation of feminine sexual uncertainty as an inherent trait rather than a structural condition. Laurie cannot name what is happening, cannot claim linguistic authority over her own experience. The visual contrast (warm/cold, yellow/blue, human/post-human) suggests radical incommensurability rather than intimacy. Critically, this differs from Bechdel/Satrapi's self-representation: Laurie is not subject claiming authority over her experience; she is an object being represented by male creators. The panel form does not grant her interpretive access to her own embodiment. Her question—\"What should I call you?\"—registers as vulnerability, incompleteness, her need to be named/recognised by the male figure. The visual rendering of her body (sexualized, exposed, warm) creates a voyeuristic relationship between the reader and the represented figure that contrasts sharply with the intimate, analytical gaze of autobiographical comics. Where Bechdel draws herself and claims authority over representation, Laurie is drawn by men (Moore conceiving, Gibbons rendering) in ways emphasising bodily availability and emotional dependence. The formal difference is political: Laurie's representation visualises not gendered self-representation but gendered objectification—representation of women's bodies and desires by those with no experiential claim to them.",
     tone: "blue",
   },
   {
-    theme: "On Joy",
-    panel: { caption: "She danced in the kitchen, alone.", sfx: "TA-DA!", art: "lightbulb" },
-    explanation: "Joy is small and uninvited. It will not show up for the camera. Practice noticing it the way you'd notice a bird at the window.",
-    tone: "yellow",
-  },
-  {
-    theme: "On Time",
-    panel: { caption: "The clock pretended not to notice.", sfx: "tick. tick.", art: "spiral" },
-    explanation: "Time isn't running out — it's being spent. The question isn't how much is left, but who you're spending it with.",
+    theme: "Watchmen—\"They Called Me Sally Jupiter\"",
+    panel: { caption: "THE PHOTOGRAPH LIES IN THE SAND.", sfx: "rustle", art: "spiral" },
+    explanation:
+      "A series of panels shows older Sally Jupiter (original Silk Spectre) in profile, ageing, body no longer conventionally attractive. Caption reads: \"IT'S 1966, AND SHE'S PACKING, TEARFUL; CARELESS WITH ANGER. / THE PHOTOGRAPH / LIES IN THE SAND / AT MY FEET.\" Rendered in darker tones with visible ageing marks. Face partially obscured in profile. Reference to \"the photograph\" suggests her identity is tied to the image as a young woman.",
+    theory:
+      "This represents the male representation of feminine ageing as diminishment, loss of value measured against youthful sexuality. Sally appears as a memory, historical artefact, object of narrative reflection rather than a subject claiming interpretive authority. The caption's reference to \"the photograph\" reveals that Sally's value is derived entirely from visual/sexual appeal. Now aged, panels render her with visible resignation—body no longer a site of power but of loss and regret. This differs radically from how Bechdel represents her own ageing, or Satrapi represents her mother's historical displacement. In Fun Home and Persepolis, ageing women are rendered with full complexity—intellectual, emotional, and historical significance preserved as bodies change. In Watchmen, Sally's ageing is rendered primarily as diminishment, past sexuality the measure against which the present is found wanting. The panel makes visible male representation's temporal logic: women are valuable when young and sexualized; ageing is inherently tragic. By contrast, Bechdel/Satrapi represent ageing as a complex temporal unfolding rather than a decline from a youthful ideal. The formal positioning—Sally in profile, partially obscured—literally removes her from full visual presence, marking her as no longer worthy of direct representational attention now that her sexual value has expired.",
     tone: "mint",
   },
   {
-    theme: "On Failure",
-    panel: { caption: "He laughed before the crash.", sfx: "WUMP!", art: "explosion" },
-    explanation: "Failure is data wearing a humiliation costume. Take notes. The costume comes off in the morning.",
+    theme: "Watchmen—\"We Don't Have Much Time\"",
+    panel: { caption: "LISTEN, EVERYONE MEET IN THE LOBBY...", sfx: "tick. tick.", art: "speedlines" },
+    explanation:
+      "Scene shows Laurie and Dan Dreiberg in conversation. Laurie's body language open but facial expression suggests uncertainty or concern. Dialogue includes: \"LISTEN, EVERYONE MEET IN THE LOBBY IN FIVE MINUTES. WE'LL ALL GO DOWN TO THE FRONT FOR A BEER.\" Relatively equal panel sizes, distributed focus suggesting democratic visual field. Yet dialogue hierarchy positions Dan and other male voices as dominant, Laurie's utterances as secondary.",
+    theory:
+      "This represents how gendered power operates through subtle distributional patterns rather than crude visual subordination. Laurie is perpetually addressed, managed, instructed by male figures throughout Watchmen. Even when appearing to have agency—organizing activities, suggesting plans—her suggestions are framed as responses to male authority or needs. The panel uses equal panel sizes suggesting visual democracy, yet dialogue structure creates sonic/textual hierarchy that undermines this. This formal technique reveals how gendered power operates not through obvious domination but through accumulated marginal positioning. This contrasts with how Bechdel/Satrapi use panel composition to grant themselves visual and narrative authority. When Bechdel appears in panels, even as small child, her consciousness is interpretively central—narrative structures itself around her understanding. Satrapi's perspective dominates visual field; we see world as she sees it. In Watchmen, Laurie's perspective is frequently externalized; we observe her from without, rarely inhabiting her consciousness as primary interpretive position. The formal difference reveals political stakes: external observation versus internal authority, object versus subject, represented versus self-representing.",
     tone: "yellow",
   },
+  {
+    theme: "Bechdel—\"When I Grow Up\"",
+    panel: { caption: "A SUBMARINE HOUSE.", sfx: "splash", art: "thoughtcloud" },
+    explanation:
+      "[Panel showing young Alison declaring she will have a submarine house when she grows up, refusing imposed femininity through imaginative architectural fantasy. Her declaration was rendered with authority, her childhood consciousness treated as interpretively significant.]",
+    theory:
+      "This represents autobiographical authority, transforming childhood refusal into a politically significant act. Where Moore/Gibbons render feminine desire and uncertainty as objects of external observation, Bechdel represents her own childhood desires—including rejection of imposed femininity—as legible, interpretable, analytically significant. Her declaration that she will have a submarine house becomes, through the act of representation, a statement of intentional refusal. Laurie's uncertainties in Watchmen, by contrast, are rendered as emotional instability, psychological weakness, and grounds for male protective intervention. The formal difference, autobiographical authority versus external representation, produces radically different meanings around the same fundamental problematic: how gendered subjects navigate imposed aesthetic and behavioural systems. By drawing herself, Bechdel claims the right to interpret her own refusals as meaningful rather than dismissing them as childish whimsy. Self-representation grants analytical authority; external representation denies it.",
+    tone: "blue",
+  },
+  {
+    theme: "Bechdel—Confrontation with Father's Sexuality",
+    panel: { caption: "THE UNSEEN INTERIOR.", sfx: "creak…", art: "key" },
+    explanation:
+      "[Panel showing nighttime exterior of family house, absence of explicit confrontation. Visual restraint rather than sensationalism. The unseen interior—secrets contained within the house—rendered as more powerful than explicit depiction. Discovery of father's homosexuality represented through architectural containment and narrative revelation rather than visual spectacle.]",
+    theory:
+      "This represents self-representation's refusal to subordinate one's own narrative to male sexual identity, even when that identity is marginalised. The panel gains resonance when read against Watchmen's treatment of sexuality. Where Moore/Gibbons represent Laurie's sexuality as something that happens to her—seduced, manipulated, positioned—Bechdel represents her father's sexuality as something he concealed, performed around, structured family existence to hide. The discovery of his homosexuality does not render him a victim of circumstance (as Laurie's entrapment with Jon might suggest) but implicates him in systems of deception and performance that structured the entire family's existence. Bechdel's representation refuses the logic of positioning feminine heterosexuality (Laurie's situation) and masculine homosexuality (father's situation) as equivalent vulnerabilities. Instead, she reveals how father's homosexuality—kept secret, denied, acted out through predatory behaviour with teenage boys—constitutes masculine power that appropriates and damages feminine and juvenile bodies. By representing this as part of her own narrative, Bechdel refuses to allow her father's sexuality to determine her gendered identity. She remains the subject of her own narrative, not a supporting character in a story about male desire. The visual restraint contrasts with Watchmen's graphic representation—Bechdel's restraint is a formal strategy, not prudishness. She refuses sensationalism and insists on complexity.",
+    tone: "pink",
+  },
+  {
+    theme: "Satrapi—\"The Veil Mandate at School\"",
+    panel: { caption: "THE VEIL.", sfx: "sigh", art: "eye" },
+    explanation:
+      "[Panel showing young Marjane and her classmates at school after the revolution. The teacher is giving instructions to remove all images of the Shah from their textbooks. The visual composition emphasises the external imposition of the new school dress code on the children—the mandatory veil/uniform is visible as something imposed from above by state authority rather than chosen by the children. The panels show Marjane's resistance and confusion about this sudden change in how she must present herself at school.]",
+    theory:
+      "This represents autobiographical representation's capacity to visualise imposed constraint while maintaining analytical authority over its meaning. Like feminist graphic memoir more broadly, Satrapi represents the imposition of feminine constraint (mandatory veil and school uniform) as something she analyses and resists through representation. Unlike Watchmen's treatment of Laurie. Where uncertainty and emotional distress are rendered as inherent feminine traits, Satrapi represents the veil as an external political imposition, something done to her and her peers rather than expressive of their nature or desires.\nThe panel form allows her to visualise the violence of the state mandate (forcing children to destroy images, forcing new dress codes) while simultaneously claiming authority over that visualisation and its meaning. She refuses the logic that would naturalise either pre-revolutionary \"freedom\" of dress or post-revolutionary constraint as authentic expressions of feminine identity. Instead, both are revealed as structural impositions upon which girls must negotiate selfhood and resistance. By drawing herself and her classmates subjected to the veil mandate, Satrapi maintains interpretive authority: she defines what this means, how it felt, and what resistance was possible. Male-created representation would not grant this analytical distance. It would either celebrate cultural tradition or condemn cultural constraint, but not preserve the complexity of the girl navigating, resisting, and surviving both.",
+    tone: "mint",
+  },
+  {
+    theme: "Satrapi—\"Funeral Preparation and Feminine Display\"",
+    panel: { caption: "THE LABOR OF APPEARANCE.", sfx: "brush...", art: "heart" },
+    explanation:
+      "[Panel showing a family gathering at a funeral, with particular attention to the formal dress and grooming of female mourners. The visual representation captures the specific aesthetic labour required of women even in death and grief—the careful presentation of the body, the styling of hair visible beneath veils, the composition of the face. The comic shows multiple generations of women, each rendered with attention to their appearance despite (or because of) the context of mourning and loss. The labour of maintaining feminine presentation is documented with specificity, rendered as significant work worthy of visual representation.]",
+    theory:
+      "This represents self-representation's capacity to render gendered labour visible and analytically significant. The panel's representation of funeral labour. The detailed attention to feminine presentation, bodily work, and aesthetic management stands in contrast to how male-authored comics treat feminine embodiment. Where male comic creators might render women's bodies as objects of visual pleasure or spectacle, Satrapi renders the work of maintaining feminine presentation (even in grief, even at funerals) as labour worthy of serious representation and analysis.\nBy documenting the specific aesthetic choices made in preparing feminine bodies for funeral display. The styling of hair, the careful draping of veils, the composed expressions, Satrapi refuses naturalisation of appearance. She reveals that even in death and mourning, feminine bodies are subject to aesthetic management and the labour of presentation. This stands in sharp contrast to how male-authored superhero comics (like Watchmen) treat embodiment: masculine bodies (particularly Jon's) are capable of transcending embodiment entirely and moving beyond concern with appearance, while feminine bodies (Laurie's, Sally's) remain fundamentally trapped in aesthetics of appearance and sexual availability.\nSatrapi's representation insists this labour is real, significant, worthy of serious representation. The refusal that male representation makes impossible. By drawing this labour herself. By visualising the work women do to maintain appearance even at funerals, Satrapi claims authority to represent gendered work that male representation either romanticises, trivialises, or renders invisible. She documents feminine labour not as a mark of oppression but as evidence of women's resilience, care work, and navigating impossible demands.",
+    tone: "yellow",
+  }
 ];
 
 const ART = {
