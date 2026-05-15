@@ -1,0 +1,140 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-pop-yellow: var(--pop-yellow);
+  --color-pop-red: var(--pop-red);
+  --color-pop-blue: var(--pop-blue);
+  --color-pop-pink: var(--pop-pink);
+  --color-pop-mint: var(--pop-mint);
+  --color-margin: var(--margin-line);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--ink);
+  --color-card: var(--paper);
+  --color-card-foreground: var(--ink);
+  --color-muted: var(--paper);
+  --color-muted-foreground: var(--ink);
+  --color-accent: var(--pop-yellow);
+  --color-accent-foreground: var(--ink);
+  --color-secondary: var(--pop-blue);
+  --color-secondary-foreground: var(--ink);
+  --color-popover: var(--paper);
+  --color-popover-foreground: var(--ink);
+  --color-input: var(--ink);
+  --color-ring: var(--pop-red);
+  --color-destructive: var(--pop-red);
+  --color-destructive-foreground: var(--paper);
+  --font-display: "Bangers", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+  --font-marker: "Permanent Marker", cursive;
+  --font-body: "Special Elite", "Courier New", monospace;
+}
+
+:root {
+  --radius: 0.25rem;
+  --paper: oklch(0.985 0.025 95);            /* warm cream */
+  --ink: oklch(0.18 0.02 60);                /* deep brown-black */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --pop-yellow: oklch(0.92 0.19 95);
+  --pop-red: oklch(0.65 0.24 28);
+  --pop-blue: oklch(0.72 0.17 235);
+  --pop-pink: oklch(0.82 0.14 12);
+  --pop-mint: oklch(0.86 0.12 165);
+  --margin-line: oklch(0.7 0.18 25);
+  --primary: var(--pop-red);
+  --primary-foreground: oklch(0.985 0.02 95);
+}
+
+.dark { --background: var(--paper); --foreground: var(--ink); }
+
+@layer base {
+  * { border-color: var(--color-ink); }
+  html, body { height: 100%; }
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    background-image:
+      /* horizontal ruled lines */
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 31px,
+        color-mix(in oklab, var(--pop-blue) 35%, transparent) 31px,
+        color-mix(in oklab, var(--pop-blue) 35%, transparent) 32px
+      ),
+      /* halftone dots */
+      radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--ink) 18%, transparent) 1px, transparent 1.6px);
+    background-size: 100% 32px, 14px 14px;
+    background-attachment: fixed;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to right,
+      transparent 0, transparent 79px,
+      color-mix(in oklab, var(--margin-line) 70%, transparent) 79px,
+      color-mix(in oklab, var(--margin-line) 70%, transparent) 81px,
+      transparent 81px);
+    z-index: 1;
+  }
+}
+
+@layer utilities {
+  .ink-border { border: 3px solid var(--ink); }
+  .ink-shadow { box-shadow: 6px 6px 0 0 var(--ink); }
+  .ink-shadow-lg { box-shadow: 10px 10px 0 0 var(--ink); }
+  .halftone-yellow {
+    background-color: var(--pop-yellow);
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--ink) 35%, transparent) 1.2px, transparent 1.6px);
+    background-size: 8px 8px;
+  }
+  .halftone-pink {
+    background-color: var(--pop-pink);
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--pop-red) 60%, transparent) 1.2px, transparent 1.6px);
+    background-size: 8px 8px;
+  }
+  .halftone-blue {
+    background-color: var(--pop-blue);
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--ink) 30%, transparent) 1.2px, transparent 1.6px);
+    background-size: 8px 8px;
+  }
+  .tape {
+    position: absolute;
+    width: 80px; height: 22px;
+    background: color-mix(in oklab, var(--pop-yellow) 75%, white);
+    opacity: 0.85;
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(.6) rotate(-4deg); opacity: 0; }
+  60% { transform: scale(1.06) rotate(1deg); opacity: 1; }
+  100% { transform: scale(1) rotate(-1deg); opacity: 1; }
+}
+@keyframes slide-up {
+  from { transform: translateY(12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes scribble-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.animate-pop-in { animation: pop-in .35s cubic-bezier(.2,1.4,.4,1) both; }
+.animate-slide-up { animation: slide-up .35s ease-out both; }
+.animate-scribble { animation: scribble-in .6s ease-out both; }
