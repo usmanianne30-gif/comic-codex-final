@@ -1,4 +1,0 @@
-const tsrStartManifest = () => ({ routes: { __root__: { filePath: "C:/Users/usman/OneDrive/Desktop/New folder/src/routes/__root.tsx", children: ["/", "/codex", "/conclusion"], assets: void 0, preloads: ["/assets/index-y5qNxzIR.js"] }, "/": { filePath: "C:/Users/usman/OneDrive/Desktop/New folder/src/routes/index.tsx", children: void 0, assets: void 0, preloads: ["/assets/index-4P0x7nUX.js"] }, "/codex": { filePath: "C:/Users/usman/OneDrive/Desktop/New folder/src/routes/codex.tsx", children: void 0, assets: void 0, preloads: ["/assets/codex-MN7S3bC5.js"] }, "/conclusion": { filePath: "C:/Users/usman/OneDrive/Desktop/New folder/src/routes/conclusion.tsx", children: void 0, assets: void 0, preloads: ["/assets/conclusion-xmlNcp6G.js"] } }, clientEntry: "/assets/index-y5qNxzIR.js" });
-export {
-  tsrStartManifest
-};

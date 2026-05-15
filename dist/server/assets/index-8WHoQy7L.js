@@ -1,10 +1,10 @@
-import { G as jsxRuntimeExports } from "./server-1zFDGI9i.js";
-import { L as Link } from "./router-BAfQ6qT_.js";
+import { G as jsxRuntimeExports } from "./server-D7UniV4A.js";
+import { L as Link } from "./router-CQvxcy4i.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
 function Intro() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "relative min-h-screen overflow-hidden flex items-center justify-center p-8 bg-paper", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "relative min-h-screen overflow-y-auto flex items-center justify-center p-8 py-20 bg-paper", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "tape", style: {
       top: 40,
       left: "10%",

@@ -832,7 +832,7 @@ function renderErrorPage() {
 let serverEntryPromise;
 async function getServerEntry() {
   if (!serverEntryPromise) {
-    serverEntryPromise = import("./server-1zFDGI9i.js").then((n) => n.Y).then(
+    serverEntryPromise = import("./server-D7UniV4A.js").then((n) => n.Y).then(
       (m) => m.default ?? m
     );
   }

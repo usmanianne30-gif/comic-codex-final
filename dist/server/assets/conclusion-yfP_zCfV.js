@@ -1,10 +1,10 @@
-import { G as jsxRuntimeExports } from "./server-1zFDGI9i.js";
-import { L as Link } from "./router-BAfQ6qT_.js";
+import { G as jsxRuntimeExports } from "./server-D7UniV4A.js";
+import { L as Link } from "./router-CQvxcy4i.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
 function Conclusion() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "relative min-h-screen overflow-hidden flex items-center justify-center p-8 bg-paper", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "relative min-h-screen overflow-y-auto flex items-center justify-center p-8 py-20 bg-paper", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "tape", style: {
       top: 30,
       right: "12%",
@@ -52,7 +52,10 @@ function Conclusion() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: `Watchmen's treatment of Laurie and Sally is not simply a "male perspective" on femininity, but systematic positioning of feminine bodies as objects, feminine consciousness as secondary to masculine meaning-making. The formal comics-style choices: panel size, gaze direction, temporal privilege tie-in this logic into representation's very structure.` }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "By contrast, Bechdel and Satrapi's formal strategies, their claims to representational authority, their preservation of complexity and ambivalence, their refusal to reduce gender to sexuality or appearance show a different politics of representation. They claim the right to represent themselves, their mothers, their female relatives, as complex subjects worthy of serious analytical attention." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "The act of claiming representational authority over one's own gendered experience is itself political intervention. It refuses the default logic that women's bodies and desires are available for male interpretation and representation. It insists that women are subjects of knowledge about their own lives, not merely objects of male observation." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 p-6 ink-border bg-pop-mint/20 text-center transform -rotate-1 shadow-[4px_4px_0_var(--ink)]", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-marker text-3xl text-pop-red", style: {
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 p-6 ink-border text-center transform -rotate-1", style: {
+          backgroundColor: "color-mix(in oklab, var(--pop-mint) 20%, white)",
+          boxShadow: "4px 4px 0 var(--ink)"
+        }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-marker text-3xl text-pop-red", style: {
           WebkitTextStroke: "0.5px var(--ink)"
         }, children: "The right to draw oneself is the right to be subject rather than object." }) })
       ] }),

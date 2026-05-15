@@ -281,17 +281,7 @@ function Index() {
   const idxRef = useRef(0);
   const stageTimers = useRef<number[]>([]);
 
-  useEffect(() => {
-    const stored = localStorage.getItem("codex-revealed");
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored);
-          const valid = parsed.filter(id => typeof id === 'number' && id < ENTRIES.length);
-          setRevealedIds(valid);
-          idxRef.current = valid.length;
-      } catch (e) {}
-    }
-  }, []);
+
 
   const openEntry = useCallback((index: number, x: number, y: number) => {
     const entry = ENTRIES[index];
@@ -318,14 +308,6 @@ function Index() {
       window.setTimeout(() => setStage(3), 1500),
     ];
 
-    setRevealedIds((prev) => {
-      if (!prev.includes(index)) {
-        const next = [...prev, index];
-        localStorage.setItem("codex-revealed", JSON.stringify(next));
-        return next;
-      }
-      return prev;
-    });
   }, []);
 
   useEffect(() => {
