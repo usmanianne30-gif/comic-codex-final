@@ -35,7 +35,7 @@ const THEORY_PLACEHOLDER =
 const ENTRIES: Entry[] = [
   {
     theme: "CancerVixen—The Diagnosis",
-    panel: { caption: "OH MY GOD I'M SICK!", sfx: "KRRSSH!", art: ["/panels/cancervixen-diagnosis.png", "/panels/cancervixen-shower.png"] },
+    panel: { caption: "OH MY GOD I'M SICK!", sfx: "KRRSSH!", art: ["/panels/cancervixen-diagnosis.png", "/panels/cancervixen-diagnosis-2.png"] },
     explanation:
       "The panel shows explosive, radiating blonde hair filling the frame before Marisa's mouth opens to scream. The typography escalates across three panels: from conversational narration to \"OH MY GOD I'M SICK!\" in oversized letters against a night sky. The text specifies \"10-12-03 A.M. THE NEXT MILLISECOND,\" claiming documentary precision. The second panel's \"(S)MOTHER\" uses parenthetical notation to layer meaning: protective/suffocating mother compressed into typographic innovation. The third panel reduces Marisa's body to a hunched shoulder and hand covering her face, small against the suburban housee. The phone becomes a recurring motif, like technology transmitting devastating news.",
     theory:
@@ -71,7 +71,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Shakuntala—Unveiling (Visibility Without Recognition)",
-    panel: { caption: "RAISE YOUR VEIL.", sfx: "rustle", art: "eye" },
+    panel: { caption: "RAISE YOUR VEIL.", sfx: "rustle", art: "/panels/shakuntala-unveiling.png" },
     explanation:
       "Top panels show elderly companion commanding: \"SHAKUNTALA, RAISE YOUR VEIL. THE KING WILL SURELY REMEMBER YOU WHEN HE SEES YOUR FACE.\" Bottom-left shows Shakuntala in close-up, veiled, eyes downcast in modest suffering. Bottom-right shows King's response: \"YOUR FACE IS INDEED LOVELY, BUT I HAVE NEVER SEEN YOU BEFORE.\" Above, hermitage women crouch searching the ground: \"THE RING MUST HAVE FALLEN SOMEWHERE. LET US LOOK FOR IT.\" Bodies bent in supplicant postures while the King stands tall with a sceptre.",
     theory:
@@ -80,7 +80,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Shakuntala—Speaking Back",
-    panel: { caption: "STOP YOUR CHATTER.", sfx: "silence", art: "thoughtcloud" },
+    panel: { caption: "STOP YOUR CHATTER.", sfx: "silence", art: "/panels/shakuntala-speaking.png" },
     explanation:
       "Upper-left shows Shakuntala speaking, still veiled: \"DO YOU REMEMBER HOW ONE DAY YOU COLLECTED RAIN-WATER IN A LOTUS FLOWER AND GAVE IT TO MY PET FAWN TO DRINK BUT SHE REFUSED.\" Extended speech reclaims narrative authority. Upper-right shows Shakuntala's unveiled face in close-up, confrontational: \"YET WHEN I OFFERED IT, SHE DRANK IT GLADLY. SO YOU SAID—YOU ARE BOTH CHILDREN OF THE FOREST AND TRUST EACH OTHER...AND...\" King's dismissive hand gesture: \"STOP YOUR CHATTER. I REMEMBER NO SUCH THING.\" Bottom panels escalate: \"OH DUSHYANT! IT IS WICKED OF YOU TO DISOWN YOUR OWN WIFE\" fills speech bubble dominating the panel. King sits smiling; she stands impassioned.",
     theory:
@@ -89,7 +89,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Watchmen—\"I Don't Know What I Should Call You\"",
-    panel: { caption: "WHAT SHOULD I CALL YOU?", sfx: "glow", art: "lightbulb" },
+    panel: { caption: "WHAT SHOULD I CALL YOU?", sfx: "glow", art: "/panels/watchmen-naming.png" },
     explanation:
       "The sequence shows Laurie Juspeczyk in a yellow costume against Dr Manhattan's blue, glowing form. Dialogue reads: \"I... I DON'T KNOW WHAT I SHOULD CALL YOU. DO YOU HAVE ANOTHER NAME, ASIDE FROM DR. MANHATTAN?\" Response: \"YES. / NAME'S / TON.\" Does not show physical consummation. Laurie's body is rendered in warm tones (yellow costume, flesh) adjacent to Jon's cool blue luminescence. Composition places her vulnerability against his post-human detachment.",
     theory:
@@ -98,7 +98,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Watchmen—\"We Don't Have Much Time\"",
-    panel: { caption: "LISTEN, EVERYONE MEET IN THE LOBBY...", sfx: "tick. tick.", art: "speedlines" },
+    panel: { caption: "LISTEN, EVERYONE MEET IN THE LOBBY...", sfx: "tick. tick.", art: "/panels/watchmen-time.png" },
     explanation:
       "Scene shows Laurie and Dan Dreiberg in conversation. Laurie's body language open but facial expression suggests uncertainty or concern. Dialogue includes: \"LISTEN, EVERYONE MEET IN THE LOBBY IN FIVE MINUTES. WE'LL ALL GO DOWN TO THE FRONT FOR A BEER.\" Relatively equal panel sizes, distributed focus suggesting democratic visual field. Yet dialogue hierarchy positions Dan and other male voices as dominant, Laurie's utterances as secondary.",
     theory:
@@ -107,7 +107,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Bechdel—\"When I Grow Up\"",
-    panel: { caption: "A SUBMARINE HOUSE.", sfx: "splash", art: "thoughtcloud" },
+    panel: { caption: "A SUBMARINE HOUSE.", sfx: "splash", art: "/panels/bechdel-submarine.png" },
     explanation:
       "[Panel showing young Alison declaring she will have a submarine house when she grows up, refusing imposed femininity through imaginative architectural fantasy. Her declaration was rendered with authority, her childhood consciousness treated as interpretively significant.]",
     theory:
@@ -116,7 +116,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Bechdel—Confrontation with Father's Sexuality",
-    panel: { caption: "THE UNSEEN INTERIOR.", sfx: "creak…", art: "key" },
+    panel: { caption: "THE UNSEEN INTERIOR.", sfx: "creak…", art: "/panels/bechdel-father.png" },
     explanation:
       "[Panel showing nighttime exterior of family house, absence of explicit confrontation. Visual restraint rather than sensationalism. The unseen interior—secrets contained within the house—rendered as more powerful than explicit depiction. Discovery of father's homosexuality represented through architectural containment and narrative revelation rather than visual spectacle.]",
     theory:
@@ -125,7 +125,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Satrapi—\"The Veil Mandate at School\"",
-    panel: { caption: "THE VEIL.", sfx: "sigh", art: "eye" },
+    panel: { caption: "THE VEIL.", sfx: "sigh", art: ["/panels/satrapi-veil.png", "/panels/satrapi-veil-2.png"] },
     explanation:
       "[Panel showing young Marjane and her classmates at school after the revolution. The teacher is giving instructions to remove all images of the Shah from their textbooks. The visual composition emphasises the external imposition of the new school dress code on the children—the mandatory veil/uniform is visible as something imposed from above by state authority rather than chosen by the children. The panels show Marjane's resistance and confusion about this sudden change in how she must present herself at school.]",
     theory:
@@ -134,7 +134,7 @@ const ENTRIES: Entry[] = [
   },
   {
     theme: "Satrapi—\"Funeral Preparation and Feminine Display\"",
-    panel: { caption: "THE LABOR OF APPEARANCE.", sfx: "brush...", art: "heart" },
+    panel: { caption: "THE LABOR OF APPEARANCE.", sfx: "brush...", art: "/panels/satrapi-funeral.png" },
     explanation:
       "[Panel showing a family gathering at a funeral, with particular attention to the formal dress and grooming of female mourners. The visual representation captures the specific aesthetic labour required of women even in death and grief—the careful presentation of the body, the styling of hair visible beneath veils, the composition of the face. The comic shows multiple generations of women, each rendered with attention to their appearance despite (or because of) the context of mourning and loss. The labour of maintaining feminine presentation is documented with specificity, rendered as significant work worthy of visual representation.]",
     theory:
