@@ -354,7 +354,7 @@ function Index() {
   }, [openEntry]);
 
   return (
-    <main className="relative min-h-screen overflow-y-auto pb-40" style={{ zIndex: 0 }}>
+    <main className="relative min-h-[1800px] overflow-y-auto pb-40" style={{ zIndex: 0 }}>
       {/* tape decorations */}
       <span className="tape" style={{ top: 24, left: 120, transform: "rotate(-6deg)" }} />
       <span className="tape" style={{ top: 18, right: 80, transform: "rotate(8deg)", background: "color-mix(in oklab, var(--pop-pink) 70%, white)" }} />
